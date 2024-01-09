@@ -1,6 +1,3 @@
-# spam_classifier_using_NLP
-
-
 # SPAM or HAM Classifier API
 This repository contains code for a FastAPI-based API that classifies text paragraphs into SPAM or HAM (non-SPAM) using a Multinomial Naive Bayes classifier. The classifier is trained on a dataset of labeled messages, and the API provides an endpoint for making predictions.
 
