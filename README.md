@@ -24,7 +24,9 @@ Request Method: POST
 # Request Payload Format:
 
 {
-  "input_text": '["this is your email text which you can simply copy and paste"]'
+ 
+  "input_text":  '["this is your email text which you can simply copy and paste"]'
+
 }
 
 - Response Format: "SPAM" or "HAM".
