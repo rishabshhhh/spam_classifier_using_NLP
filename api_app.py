@@ -27,21 +27,12 @@ def read_sub(request: Request):
         "app_url_for": app.url_path_for("read_sub"),
         "subapp_url_for": subapi.url_path_for("read_sub"),
     }
-
+nest_asyncio.apply()
 ############################################################################################################################################
 
 class values(BaseModel):
     input_text: Optional[StrictStr] = None
         
-############################################################################################################################################
-        
-nest_asyncio.apply()
-
-############################################################################################################################################
-
-from typing import List
-from fastapi import HTTPException
-
 ############################################################################################################################################
 @subapi.post("/spam_classifier_")
 async def smartapi_request(item: values):
@@ -75,5 +66,5 @@ app.mount("/spam_classifier", subapi)
 
 ############################################################################################################################################
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000, workers=1)
+    uvicorn.run(app, host="YOURHOST", port="YOURPORT", workers=1)
 
